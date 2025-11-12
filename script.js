@@ -16,7 +16,7 @@ const listaCarrinho = document.getElementById("lista-carrinho");
 const totalCarrinho = document.getElementById("total-carrinho");
 const btnFinalizar = document.getElementById("btn-finalizar");
 
-// ====== BUSCA PRODUTOS ======
+
 fetch("https://dummyjson.com/products")
   .then(res => res.json())
   .then(data => {
@@ -28,7 +28,7 @@ fetch("https://dummyjson.com/products")
     console.error(err);
   });
 
-// ====== MOSTRA PRODUTOS ======
+
 function mostrarProdutos() {
   const novos = produtos.slice(produtosExibidos, produtosExibidos + produtosPorPagina);
   novos.forEach(produto => {
@@ -55,14 +55,14 @@ function mostrarProdutos() {
   if (produtosExibidos >= produtos.length) btnCarregar.style.display = "none";
 }
 
-// ====== ADICIONAR AO CARRINHO ======
+
 function adicionarCarrinho(produto) {
   carrinho.push(produto);
   cartCount.textContent = carrinho.length;
   atualizarCarrinho();
 }
 
-// ====== ATUALIZAR LISTA DO CARRINHO ======
+
 function atualizarCarrinho() {
   listaCarrinho.innerHTML = "";
   let total = 0;
@@ -80,7 +80,7 @@ function atualizarCarrinho() {
 
   totalCarrinho.textContent = `Total: R$ ${total.toFixed(2)}`;
 
-  // evento de remover item
+
   document.querySelectorAll(".btn-remover").forEach(btn => {
     btn.addEventListener("click", e => {
       const i = e.target.dataset.index;
@@ -91,21 +91,21 @@ function atualizarCarrinho() {
   });
 }
 
-// ====== MODAL CARRINHO ======
+
 btnCarrinho.addEventListener("click", () => {
   atualizarCarrinho();
   modalCarrinho.style.display = "block";
 });
 closeModalCarrinho.addEventListener("click", () => (modalCarrinho.style.display = "none"));
 
-// ====== MODAL COMPRA (QR CODE) ======
+
 function abrirModalCompra(produto) {
   qrCodeImg.src = `https://api.qrserver.com/v1/create-qr-code/?data=Pagamento%20do%20produto%20${encodeURIComponent(produto.title)}&size=200x200`;
   modalCompra.style.display = "block";
 }
 closeModalCompra.addEventListener("click", () => (modalCompra.style.display = "none"));
 
-// ====== FINALIZAR COMPRA ======
+
 btnFinalizar.addEventListener("click", () => {
   if (carrinho.length === 0) {
     alert("Seu carrinho está vazio!");
@@ -120,7 +120,7 @@ btnFinalizar.addEventListener("click", () => {
   atualizarCarrinho();
 });
 
-// ====== FECHAR MODAIS AO CLICAR FORA ======
+
 window.addEventListener("click", e => {
   if (e.target === modalCompra) modalCompra.style.display = "none";
   if (e.target === modalCarrinho) modalCarrinho.style.display = "none";

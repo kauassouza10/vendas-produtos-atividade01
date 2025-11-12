@@ -11,7 +11,7 @@ body {
   align-items: center;
 }
 
-/* ===== HEADER ===== */
+
 .header {
   width: 100%;
   background: #d4b839;
@@ -44,7 +44,7 @@ body {
   align-items: center;
 }
 
-/* ===== FOOTER ===== */
+
 .footer {
   width: 100%;
   height: 10vh;
@@ -61,7 +61,7 @@ body {
   z-index: 10;
 }
 
-/* ===== ICONES ===== */
+
 .icon {
   font-size: 40px;
   color: #fff;
@@ -73,7 +73,7 @@ body {
   transform: scale(1.1);
 }
 
-/* ===== CONTAINER DOS PRODUTOS ===== */
+
 #produtos-container {
   margin-top: 12vh;
   margin-bottom: 12vh;
@@ -84,7 +84,7 @@ body {
   gap: 20px;
 }
 
-/* ===== CARD ===== */
+
 .card {
   background: #fff;
   border-radius: 10px;
@@ -103,7 +103,7 @@ body {
   transform: scale(1.03);
 }
 
-/* ===== IMAGEM ===== */
+
 .card img {
   width: 100%;
   height: 200px;
@@ -112,13 +112,13 @@ body {
   margin-bottom: 10px;
 }
 
-/* ===== TÍTULO ===== */
+
 .card h2 {
   font-size: 1.1rem;
   margin: 10px 0 5px;
 }
 
-/* ===== DESCRIÇÃO ===== */
+
 .card p {
   flex-grow: 1;
   color: #555;
@@ -126,20 +126,20 @@ body {
   margin-bottom: 10px;
 }
 
-/* ===== PREÇO ===== */
+
 .price {
   font-weight: bold;
   color: #27ae60;
   margin: 5px 0;
 }
 
-/* ===== RANKING ===== */
+
 .rating {
   color: #f39c12;
   font-weight: bold;
 }
 
-/* ===== BOTÃO ===== */
+
 .btn-comprar {
   background: #27ae60;
   color: white;
@@ -156,7 +156,7 @@ body {
   background: #1e7c4d;
 }
 
-/* ===== BOTÃO CARREGAR MAIS ===== */
+
 .btn-carregar {
   margin: 100px 0;
   padding: 12px 24px;
@@ -174,7 +174,7 @@ body {
   background: #b79e2e;
 }
 
-/* ===== MODAL ===== */
+
 .modal {
   display: none;
   position: fixed;
@@ -203,7 +203,7 @@ body {
   cursor: pointer;
 }
 
-/* ===== CARRINHO MODAL ===== */
+
 #lista-carrinho {
   max-height: 300px;
   overflow-y: auto;
@@ -239,7 +239,7 @@ body {
 }
 
 .btn-carrinho {
-  background: #3498db; 
+  background: #3498db;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -251,5 +251,5 @@ body {
 }
 
 .btn-carrinho:hover {
-  background: #2980b9; 
+  background: #2980b9;
 }
