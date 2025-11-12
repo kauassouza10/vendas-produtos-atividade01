@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini E-commerce</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="header">
+    <span class="material-symbols-outlined icon">home</span>
+    <div id="btn-carrinho" class="cart-icon">
+      <span class="material-symbols-outlined icon">shopping_bag</span>
+      <span id="cart-count">0</span>
+    </div>
+  </header>
+
+  <main id="produtos-container"></main>
+
+  <button id="btn-carregar" class="btn-carregar">Carregar mais produtos</button>
+
+  <footer class="footer">
+    Todos os direitos reservados
+  </footer>
+
+  <!-- Modal do QR Code -->
+  <div id="modal-compra" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Pagamento via QR Code</h2>
+      <img id="qrcode" src="" alt="QR Code">
+      <p>Escaneie o QR Code para concluir a compra.</p>
+    </div>
+  </div>
+
+  <!-- Modal do Carrinho -->
+  <div id="modal-carrinho" class="modal">
+    <div class="modal-content">
+      <span class="close-carrinho">&times;</span>
+      <h2>🛒 Seu Carrinho</h2>
+      <div id="lista-carrinho"></div>
+      <div id="total-carrinho"></div>
+      <button id="btn-finalizar" class="btn btn-comprar" style="margin-top:15px;">Finalizar Compra</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
